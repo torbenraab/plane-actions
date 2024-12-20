@@ -16,7 +16,7 @@ A reusable GitHub Action for building and pushing Docker images to both DockerHu
 
 ```yaml
 - name: Build and Push Docker Image
-  uses: makeplane/actions/build-push@v1.1
+  uses: makeplane/actions/build-push@v1.0.0
   with:
     # Required Parameters
     dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -98,7 +98,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push
-        uses: makeplane/actions/build-push@v1.1
+        uses: makeplane/actions/build-push@v1.0.0
         with:
           dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push Release
-        uses: makeplane/actions/build-push@v1.1
+        uses: makeplane/actions/build-push@v1.0.0
         with:
           dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
