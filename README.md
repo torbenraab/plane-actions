@@ -1,4 +1,4 @@
-# reuse-actions
+# Docker Build & Push GitHub Actions
 
 ## Build and Push Docker Image Action
 
@@ -125,4 +125,3 @@ jobs:
           release-version: "v1.0.0"
           buildx-platforms: "linux/amd64,linux/arm64"
 ```
-
