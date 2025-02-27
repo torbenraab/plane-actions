@@ -7,6 +7,9 @@ inputs:
   dockerhub-token:
     description: "The Dockerhub Token"
     required: true
+  dockerhub-registry:
+    description: "The Dockerhub URL"
+    required: false
 
   private-registry-push:
     description: "Flag to push to private registry"
@@ -138,6 +141,7 @@ runs:
       with:
         username: ${{ inputs.dockerhub-username }}
         password: ${{ inputs.dockerhub-token}}
+        registry: ${{ inputs.dockerhub-registry }}
 
     - name: Login to Private Registry
       if: ${{ inputs.private-registry-push == 'true' }}
